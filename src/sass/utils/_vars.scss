@@ -26,11 +26,9 @@ body {
   --yellow-bg-cl: #ffe550;
   --white-bg-cl: #fefefe;
   --btn-white-bg-cl: #ffffff;
-  --gradient-bg-cl: radial-gradient(
-    50% 50% at 50% 50%,
-    #2f583f 0%,
-    rgba(105, 105, 105, 0) 100%
-  );
+  --header-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+  --footer-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+  --shadow-fruit-cl: radial-gradient(50% 50% at 50% 50%, #2f583f 0%, rgba(105, 105, 105, 0) 100%);
 
   --border-btn-default: #ffe550;
   --border-bth-success: #7eb101;
