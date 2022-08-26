@@ -47,6 +47,8 @@
     border-radius: 139.658px;
     padding: 18px 17px;
 
+    transition: border-color 300ms ease;
+
     &:nth-last-child(-n+3) {
             display: none;
         }
