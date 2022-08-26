@@ -1,0 +1,2 @@
+function newSlider(e){var t=e.querySelector(".button--prev"),n=e.querySelector(".button--next"),r=e.querySelector(".list"),l=r.childElementCount,c=0;function i(e){c=e<0?l-1:e>l-1?0:e,r.style.transform="translateX(".concat(100*-c,"%)")}n.addEventListener("click",(function(){i(c+1)})),t.addEventListener("click",(function(){i(c-1)})),i(0)}var slider1=document.getElementById("slider1");newSlider(slider1,!0);
+//# sourceMappingURL=index.4d3b2218.js.map
