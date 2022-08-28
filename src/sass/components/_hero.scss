@@ -3,7 +3,13 @@
   position: relative;
   @include mq(tab) {
     padding-top: 60px;
+    padding-bottom: 73px;
   }
+  @include mq(desk){
+    padding-top: 159px;
+    padding-bottom: 164px;
+  }
+
   &__container {
     @extend %container;
     position: relative;
@@ -11,36 +17,34 @@
 
   &__title {
     margin: 0;
+    font-weight: 700;
     @include mq(mob-only) {
       max-width: 480px;
-      margin: 0 0 28px 0;
+      margin-bottom: 28px;
       font-size: 28px;
       line-height: 1.18;
     }
     @include mq(tab) {
-      max-width: 537px;
       margin-bottom: 44px;
+      max-width: 537px;
       font-size: 42px;
-      line-height: 120%;
+      line-height: 1.2;
     }
-    @include mq(desk) {
-      margin-top: 99px;
+    @include mq(desk){    
       margin-bottom: 28px;
       font-size: 48px;
       line-height: 1.2;
       max-width: 502px;
     }
   }
+  
   &__text {
     @include mq(mob-only) {
-      font-size: 14px;
-      line-height: 150%;
       margin-bottom: 28px;
+      font-size: 14px;
       max-width: 480px;
     }
     @include mq(tab) {
-      font-size: 16px;
-      line-height: 150%;
       margin-bottom: 40px;
       max-width: 336px;
     }
@@ -49,10 +53,11 @@
     }
   }
   &__btn {
-    top: 0;
     @extend %btn;
-    height: 32px;
-    border-radius: 30px;
+    padding: 6px 18px;
+
+    font-weight: 500;
+    font-size: 13px;
 
     transition: background-color 300ms ease-in;
   }
@@ -128,18 +133,12 @@
     border: 0;
     fill: var(--arrow-bg-cl);
     @include mq(tab) {
-      &--next:hover,
-      &--next:focus,
-      &--prev:hover,
-      &--prev:focus {
+      :is(&--next, &--prev):is(:hover, :focus) {
         fill: var(--arrow-bg-cl);
       }
     }
     @include mq(desk) {
-      &--next:hover,
-      &--next:focus,
-      &--prev:hover,
-      &--prev:focus {
+      :is(&--next, &--prev):is(:hover, :focus) {
         fill: var(--arrow-bg-hover-cl);
       }
     }
@@ -149,6 +148,9 @@
         height: 28px;
         left: -8px;
         padding: 3.83 13.36 3.83 9.14;
+        transition-property: fill, top;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         &:active {
           fill: var(--arrow-bg-cl);
           top: 147px;
@@ -161,6 +163,9 @@
         height: 40px;
         padding: 5.47 18.53 5.47 13.06;
         border-radius: 8px;
+        transition-property: fill, top;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         &:active {
           fill: var(--arrow-bg-cl);
           top: 268px;
@@ -174,6 +179,9 @@
         width: 34px;
         height: 28px;
         padding: 3.83 9.14 3.83 13.36;
+        transition-property: fill, top;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         &:active {
           fill: var(--arrow-bg-cl);
           top: 147px;
@@ -186,7 +194,9 @@
         height: 40px;
         padding: 5.47 13.06 5.47 18.53;
         border-radius: 8px;
-        z-index: 1;
+        transition-property: fill, top;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         &:active {
           fill: var(--arrow-bg-cl);
           top: 268px;
